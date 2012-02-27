@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Bookmarks{% endblock %}
+{% block head %}Welcome to Bookmarks{% endblock %}
+{% block content %}
+    {% if user.username %}
+        <p>Welcome {{ user.username }}!</p>
+        <p>Here you can store and share bookmarks!</p>
+    {% else %}
+        <p>Welcome!</p>
+        <p>You need to <a href="/login/">Login</a>
+        before you can store and share bookmarks.</p>
+    {% endif %}
+    <h2>Recent Shared Bookmarks</h2>
+    {% include 'shared_bookmark_list.html' %}
+{% endblock %}
