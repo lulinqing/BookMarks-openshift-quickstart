@@ -37,7 +37,7 @@ Then we need mysql database support for your app:
 
     $ rhc app cartridge add -a bookmarks -c mysql-5.1
 
-### Update the "wsgi/osqa/settings.py" config file with the mysql database information you just got:
+### Update for mysql database:
 
     $ cd wsgi/Bookmarks
     $ vi settings.py
@@ -53,7 +53,7 @@ Done. Let's make a little save
     $ git commit -a -m 'update settings.py'
     $ git push
 
-### Forwarding remote mysql service port to your local machine
+Forwarding remote mysql service port to your local machine
 
     $ rhc-port-forward -a bookmarks
 
@@ -62,8 +62,7 @@ Prepare your mysql database for app, you can create an user now or choose 'no' t
     $ ./manage.py syncdb
 
 
-Enjoy your Bookmarks App at:
-----------------------------
+### Enjoy your Bookmarks App at:
 
     http://bookmarks-${your_namespace}.rhcloud.com
 
