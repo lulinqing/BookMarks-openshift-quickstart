@@ -20,7 +20,7 @@ The last step, create a namespace within your account:
 
     $ rhc domain create -n ${your_namespace} -l ${your_account}
 
-Let't Rock
+Let's Rock
 ----------
 
 ### Create a python application called "bookmarks" first:
