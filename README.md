@@ -62,7 +62,8 @@ Prepare your mysql database for app, you can create an user now or choose 'no' t
     $ ./manage.py syncdb
 
 
-### That's it, you can now checkout your application at:
+Enjoy your Bookmarks App at:
+----------------------------
 
     http://bookmarks-${your_namespace}.rhcloud.com
 
