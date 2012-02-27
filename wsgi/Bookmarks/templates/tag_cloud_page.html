@@ -2,6 +2,7 @@
 {% block title %}Tag Cloud{% endblock %}
 {% block head %}Tag Cloud{% endblock %}
 {% block content %}
+    <p>Used Tags:</p>
     <div id="tag-cloud">
         {% for tag in tags %}
             <a href="/tag/{{ tag.name|urlencode }}/" class="tag-cloud-{{ tag.weight }}">{{ tag.name|escape }}</a>
