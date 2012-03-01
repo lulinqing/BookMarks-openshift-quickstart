@@ -1,7 +1,7 @@
 Bookmarks App on OpenShift
 ===================
 
-This sample Bookmarks App show how easy to deploy a typical Django app on OpenShift in a minute.
+This sample Bookmarks App shows how to deploy a typical Django App on OpenShift in a minute.
 
 Before We Start
 ---------------
@@ -14,9 +14,9 @@ You don't have an account yet? Sign-up and create your account for free : http:/
 
 Then you need to install 'rhc' client tools following the quickstart on OpenShift website.
 
-Also, make sure you have 'git' and 'django' installed on your machine.
+Also, make sure that you have 'git' and 'django' installed on your machine.
 
-The last step, create a namespace within your account:
+The last step: create a namespace within your account:
 
     $ rhc domain create -n ${your_namespace} -l ${your_account}
 
@@ -33,7 +33,7 @@ And let's add files in this repo into your Bookmarks app:
     $ git remote add upstream -m master git://github.com/lulinqing/openshift-bookmarks.git
     $ git pull -s recursive -X theirs upstream master
 
-Then we need mysql database support for your app:
+Then we need mysql database for your app:
 
     $ rhc app cartridge add -a bookmarks -c mysql-5.1
 
@@ -48,12 +48,12 @@ Then update following lines:
     DATABASE_PASSWORD = 'xxxxxxxxxx'    # replace it with your password
     DATABASE_HOST = 'xx.xx.xx.xx'       # replace it with IP of your app
 
-Done. Let's make a little save
+Done. Let's save it:
 
     $ git commit -a -m 'update settings.py'
     $ git push
 
-Forwarding remote mysql service port to your local machine
+Forward the remote mysql service port to your local machine
 
     $ rhc-port-forward -a bookmarks
 
