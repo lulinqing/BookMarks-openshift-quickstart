@@ -43,10 +43,12 @@ Then we need mysql database for your app:
     $ vi settings.py
 
 Then update following lines:
+Remember to export the OPENSHIFT_* vars into local env if you are using them locally:
 
-    DATABASE_NAME = 'bookmarks'        # change it if you used another app name
-    DATABASE_PASSWORD = 'xxxxxxxxxx'    # replace it with your password
-    DATABASE_HOST = 'xx.xx.xx.xx'       # replace it with IP of your app
+    import os.environ                   # import if you are using OPENSHIFT_* vars
+    DATABASE_NAME = 'bookmarks'         # change it if you used another app name, or use os.environ['OPENSHIFT_APP_NAME'].
+    DATABASE_PASSWORD = 'xxxxxxxxxx'    # replace it with your password, or use os.environ['OPENSHIFT_DB_PASSWORD'].
+    DATABASE_HOST = 'xx.xx.xx.xx'       # replace it with IP of your app, or use os.environ['OPENSHIFT_DB_HOSTt '].
 
 Done. Let's save it:
 
