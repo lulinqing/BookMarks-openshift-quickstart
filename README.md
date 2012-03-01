@@ -45,10 +45,13 @@ Then we need mysql database for your app:
 Then update following lines:
 Remember to export the OPENSHIFT_* vars into local env if you are using them locally:
 
-    import os.environ                   # import if you are using OPENSHIFT_* vars
-    DATABASE_NAME = 'bookmarks'         # change it if you used another app name, or use os.environ['OPENSHIFT_APP_NAME'].
-    DATABASE_PASSWORD = 'xxxxxxxxxx'    # replace it with your password, or use os.environ['OPENSHIFT_DB_PASSWORD'].
-    DATABASE_HOST = 'xx.xx.xx.xx'       # replace it with IP of your app, or use os.environ['OPENSHIFT_DB_HOSTt '].
+    import os.environ           # import if you are using OPENSHIFT_* vars
+    'ENGINE': 'mysqlite3',
+    'NAME' = 'bookmarks'        # change it according to your database name, or use os.environ['OPENSHIFT_APP_NAME'].
+    'USER' = 'admin'            # change it according to your Root Username, or use os.environ['OPENSHIFT_DB_USERNAME'].
+    'PASSWORD' = 'xxxxxxxxxx'   # change it according to your Root Password, or use os.environ['OPENSHIFT_DB_PASSWORD'].
+    'HOST' = 'xx.xx.xx.xx'      # change it according to your Connection URL, or use os.environ['OPENSHIFT_DB_HOST'].
+    'PORT': '3306',             # change it according to your Connection URL, or use os.environ['OPENSHIFT_DB_PORT'].
 
 Done. Let's save it:
 
