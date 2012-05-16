@@ -71,3 +71,6 @@ Prepare your mysql database for app, you can create an user now or choose 'no' t
 
     http://bookmarks-${your_namespace}.rhcloud.com
 
+Here goes mine:
+
+    http://bookmarks-linqing.rhcloud.com/
