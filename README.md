@@ -30,7 +30,7 @@ Let's Rock
 And let's add files in this repo into your Bookmarks app:
 
     $ cd bookmarks
-    $ git remote add upstream -m master git://github.com/lulinqing/openshift-bookmarks.git
+    $ git remote add upstream -m master git://github.com/lulinqing/BookMarks-openshift-quickstart.git
     $ git pull -s recursive -X theirs upstream master
 
 Then we need mysql database for your app:
