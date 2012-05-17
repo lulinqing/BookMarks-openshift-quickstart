@@ -8,7 +8,7 @@ Before We Start
 
 ### You need an account on OpenShift
 
-You don't have an account yet? Sign-up and create your account for free : http://www.openshift.com
+You don't have an account yet? Sign-up and create your account for free : http://openshift.redhat.com
 
 ### Some preparations
 
