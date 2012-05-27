@@ -14,9 +14,7 @@ You don't have an account yet? Sign-up and create your account for free : http:/
 
 Then you need to install 'rhc' client tools following the quickstart on OpenShift website.
 
-Also, make sure that you have 'git' and 'django' installed on your machine.
-
-The last step: create a namespace within your account:
+And create a namespace within your account via web console or client tools:
 
     rhc domain create -n ${your_namespace} -l ${your_account}
 
