@@ -1,4 +1,4 @@
-import os.path
+import os
 
 # Django settings for django_bookmarks project.
 
@@ -13,13 +13,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-#        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'bookmarks',                      # Or path to database file if using sqlite3.
-        'USER': 'admin',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.'+os.environ['OPENSHIFT_DB_TYPE'],
+        'NAME': os.environ['OPENSHIFT_APP_NAME'],
+        'USER': os.environ['OPENSHIFT_DB_USERNAME'],
+        'PASSWORD': os.environ['OPENSHIFT_DB_PASSWORD'],
+        'HOST': os.environ['OPENSHIFT_DB_HOST'],
+        'PORT': os.environ['OPENSHIFT_DB_PORT']
     }
 }
 
